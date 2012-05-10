@@ -29,9 +29,11 @@ def common_end(a, b):
   """
   return a[0] == b[0] or a[-1] == b[-1]
 
+
 def sum3(nums):
   """Given an array of ints length 3, return the sum of all the elements."""
   return sum(nums)
+
 
 def rotate_left3(nums):
   """
