@@ -29,7 +29,7 @@ def centered_average(nums):
   assume that the array is length 3 or more. 
   """
   nums.sort()
-  return sum(nums[1:-1])/(len(nums)-2)
+  return sum(nums[1:-1]) / (len(nums) - 2)
 
 def sum13(nums):
   """
