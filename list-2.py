@@ -14,12 +14,7 @@ def big_diff(nums):
   largest and smallest values in the array. Note: the built-in min(v1, v2) and 
   max(v1, v2) functions return the smaller or larger of two values. 
   """
-  mn = nums[0]
-  mx = nums[0]
-  for n in nums[1:]:
-    mn = min(mn,n)
-    mx = max(mx,n)
-  return mx-mn
+  return max(nums) - min(nums)
 
 def centered_average(nums):
   """
