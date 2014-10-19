@@ -23,6 +23,12 @@ def centered_average(nums):
   values in the array. Use int division to produce the final average. You may
   assume that the array is length 3 or more. 
   """
+  """ 
+  To be more efficient :-) 
+  nums.remove(max(nums))
+  nums.remove(min(nums))
+  return sum(nums)/len(nums)
+  """
   nums.sort()
   return sum(nums[1:-1])/(len(nums)-2)
 
