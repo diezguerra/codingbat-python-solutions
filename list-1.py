@@ -63,9 +63,7 @@ def sum2(nums):
   If the array length is less than 2, just sum up the elements that exist,
   returning 0 if the array is length 0.
   """
-  result = 0 if len(nums) == 0 else nums[0]
-  result += 0 if len(nums) < 2 else nums[1]
-  return result
+   return sum(nums[:2])
 
 def middle_way(a, b):
   """
