@@ -29,12 +29,13 @@ def count_code(str):
   given string, except we'll accept any letter for the 'd', so "cope"  and 
   "cooe" count.
   """
-  count = 0
-  i=0
-  while "co" in str[i:]:
-    if len(str[i+str[i:].index("co"):]) >= 4 and str[i+3+str[i:].index("co")] == "e":
-      count += 1
-    i += str[i:].index("co")+3
+  word="co"
+  word1="e"
+  count=0
+  for i in str:
+      word2=word+i+word1
+      if word2 in str:
+          count+=1
   return count
 
 def end_other(a, b):
