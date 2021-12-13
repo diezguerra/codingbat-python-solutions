@@ -29,12 +29,13 @@ def count_code(str):
   given string, except we'll accept any letter for the 'd', so "cope"  and 
   "cooe" count.
   """
-  count = 0
-  i=0
-  while "co" in str[i:]:
-    if len(str[i+str[i:].index("co"):]) >= 4 and str[i+3+str[i:].index("co")] == "e":
-      count += 1
-    i += str[i:].index("co")+3
+  word="co"
+  word1="e"
+  count=0
+  for i in str:
+      word2=word+i+word1
+      if word2 in str:
+          count+=1
   return count
 
 def end_other(a, b):
@@ -52,9 +53,14 @@ def end_other(a, b):
   the xyz is not directly preceeded by a period (.). So "xxyz" counts but
   "x.xyz" does not. 
   """
-  i=0
-  while "xyz" in str[i:]:
-    if str[i-1+str[i:].index("xyz")] != ".":
+  if "xyz" in str and ".xyz" not in str:
       return True
-    i += str[i:].index("xyz")+2
-  return False
+  elif "xyz" in str and ".xyz" in str:
+      if str.startswith(".xyz") or str.endswith(".xyz"):
+          return False
+      else:
+          return True
+  elif ".xyz" in str and "xyz" not in str:
+      return False
+  else:
+    return False
