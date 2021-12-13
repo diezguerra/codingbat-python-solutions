@@ -53,9 +53,14 @@ def end_other(a, b):
   the xyz is not directly preceeded by a period (.). So "xxyz" counts but
   "x.xyz" does not. 
   """
-  i=0
-  while "xyz" in str[i:]:
-    if str[i-1+str[i:].index("xyz")] != ".":
+  if "xyz" in str and ".xyz" not in str:
       return True
-    i += str[i:].index("xyz")+2
-  return False
+  elif "xyz" in str and ".xyz" in str:
+      if str.startswith(".xyz") or str.endswith(".xyz"):
+          return False
+      else:
+          return True
+  elif ".xyz" in str and "xyz" not in str:
+      return False
+  else:
+    return False
