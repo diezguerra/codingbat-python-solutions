@@ -27,7 +27,7 @@ def common_end(a, b):
   element or they have the same last element. Both arrays will be length 1
   or more.
   """
-  return a[0] == b[0] or a[-1] == b[-1]
+  return (len(a) and len(b))>0 and a[0] == b[0] or a[-1] == b[-1]
 
 
 def sum3(nums):
